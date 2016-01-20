@@ -56,6 +56,9 @@ def show_madlib():
 
     choice_color = request.args.get("color")
     choice_noun = request.args.get("noun")
+    choice_verb = request.args.getlist("verbs")
+    print "*********************************"
+    print choice_verb
     choice_adjective = request.args.get("adjective")
     player = request.args.get("person")
 
@@ -63,6 +66,7 @@ def show_madlib():
     return render_template("madlib.html",
                             color=choice_color,
                             noun=choice_noun,
+                            verbs=choice_verb,
                             person=player,
                             adjective=choice_adjective
                             )

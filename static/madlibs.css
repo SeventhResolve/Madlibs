@@ -1,0 +1,13 @@
+h1 {
+    color: #cc0000;
+    font-family: Helvetica, sans-serif; 
+}
+
+body {
+    background-color: #ffb366;
+}
+
+#balloonicorn {
+    height:50%;
+    width: 50%;
+}
