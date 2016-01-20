@@ -43,13 +43,29 @@ def show_game_form():
     """If they want to play MadLibs"""
 
     choice_for_game = request.args.get("game")
+
     if choice_for_game == "no":
-        print "#############################"
         return render_template("goodbye.html")
     else:
         return render_template("game.html")
 
 
+@app.route('/madlib')
+def show_madlib():
+    """Play MadLibs!!"""
+
+    choice_color = request.args.get("color")
+    choice_noun = request.args.get("noun")
+    choice_adjective = request.args.get("adjective")
+    player = request.args.get("person")
+
+
+    return render_template("madlib.html",
+                            color=choice_color,
+                            noun=choice_noun,
+                            person=player,
+                            adjective=choice_adjective
+                            )
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads" our web app
     # if we change the code.
