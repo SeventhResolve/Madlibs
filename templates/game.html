@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <title>Playing MadLibs</title>
+</head>
+<body>
+    <div>
+        <form action="http://localhost:5000/madlib">
+            <div>
+                Pick a color:
+                <select name="pickcolor">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </div>
+            <div>
+                Pick a noun:
+                <input type="text" name="noun">
+            </div>
+            <div>
+            Pick and adjective:
+                <input type="radio" name="adjective" value="fluffy">Fluffy!
+                <input type="radio" name="adjective" value="amazing">Amazing!
+                <input type="radio" name="adjective" value="poopy">Poopy!
+            </div>
+        </form>
+    </div>
+</body>
+</html>
